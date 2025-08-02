@@ -1,7 +1,6 @@
 {
   "name": "homepage",
   "private": true,
-  "homepage": "https://Sarulat.github.io/samplehomepage",
   "version": "0.0.0",
   "type": "module",
   "scripts": {

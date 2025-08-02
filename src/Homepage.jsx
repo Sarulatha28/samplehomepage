@@ -6,8 +6,11 @@ import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
 import img1 from './assets/img1.jpg'
 import img2 from './assets/img2.jpg'
 import img4 from './assets/img4.jpg'
-import img5 from './assets/img5.jpg'
-import img6 from './assets/img6.jpg'
+import img5 from '/src/assets/img5.jpg';
+import img6 from '/src/assets/img6.jpg';
+import img7 from '/src/assets/img7.jpg';
+import img8 from '/src/assets/img8.jpg';
+
 
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -128,10 +131,12 @@ const HomePage = () => {
           <h2 className="text-2xl md:text-3xl font-bold  font-inter text-center mb-8">Exploring the Role of <br/> <span className="font-inter font-semibold text-[40px] text-[#C08CDB] leading-[100%] tracking-[0%] text-center">Labels & Stickers</span> </h2>
          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
   {[
-    { title: "Printed Labels", img:"/src/assets/img5.jpg" },
-    { title: "Barcode Stickers", img: "/src/assets/img6.jpg" },
-    { title: "Heat Transfer Stickers", img: "/src/assets/img7.jpg" },
-    { title: "Woven Labels", img: "/src/assets/img8.jpg" }
+    
+  { title: "Printed Labels", img: img5 },
+  { title: "Barcode Stickers", img: img6 },
+  { title: "Heat Transfer Stickers", img: img7 },
+  { title: "Woven Labels", img: img8 }
+
   ].map((item, idx) => (
    <div key={idx} className="bg-white rounded shadow hover:shadow-lg transition">
   <img src={item.img} alt={item.title} className="rounded-t w-full h-36 object-cover" />
