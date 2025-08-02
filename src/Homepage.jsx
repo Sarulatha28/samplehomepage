@@ -134,7 +134,7 @@ const HomePage = () => {
     
   { title: "Printed Labels", img: img5 },
   { title: "Barcode Stickers", img: img6 },
-  { title: "Heat Transfer Stickers", img: img7 },
+  { title: "Heat  Stickers", img: img7 },
   { title: "Woven Labels", img: img8 }
 
   ].map((item, idx) => (
