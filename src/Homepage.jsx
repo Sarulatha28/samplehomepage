@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram } from 'react-icons/fa';
+import { MdEmail, MdPhone, MdLocationOn } from 'react-icons/md';
+
 import img1 from './assets/img1.jpg'
 import img2 from './assets/img2.jpg'
 import img4 from './assets/img4.jpg'
@@ -119,7 +121,10 @@ const HomePage = () => {
       {/* Services Section */}
       <section className="py-12 md:py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <h3 className="text-center bg-purple-600 text-align-center h-8 w-30 rounded-[10px] font-inter font-normal text-[14px] leading-[30px] tracking-[0%] uppercase text-white font-semibold mb-2">Our Services</h3>
+         <h3 className="bg-purple-600 w-[120px] h-8 rounded-[10px] font-inter font-normal text-[14px] leading-[30px] tracking-[0%] uppercase text-white font-semibold mb-2 mx-auto text-center">
+  Our Services
+</h3>
+
           <h2 className="text-2xl md:text-3xl font-bold  font-inter text-center mb-8">Exploring the Role of <br/> <span className="font-inter font-semibold text-[40px] text-[#C08CDB] leading-[100%] tracking-[0%] text-center">Labels & Stickers</span> </h2>
          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
   {[
@@ -128,24 +133,24 @@ const HomePage = () => {
     { title: "Heat Transfer Stickers", img: "/src/assets/img7.jpg" },
     { title: "Woven Labels", img: "/src/assets/img8.jpg" }
   ].map((item, idx) => (
-    <div key={idx} className="bg-white rounded shadow hover:shadow-lg transition">
-      <img src={item.img} alt={item.title} className="rounded-t w-full h-36 object-cover" />
-       <div className="mb-2">
-          <span className="inline-block mt-2 bg-purple-600 text-white text-xs font-medium px-3 py-2 rounded-full">
-            Garments
-          </span>
-        </div>
-      <div className="p-2">
-        <h4 className="font-bold mb-2 text-2xl  text-center">{item.title}</h4>
-        
-        {/* Add the badge below title, aligned left */}
-       
-        
-        <div className="text-center">
-          <button className="text-purple-600 border border-purple-600 bg-white hover:underline px-5 py-2 rounded">
-            Learn Today
-          </button>
-        </div>
+   <div key={idx} className="bg-white rounded shadow hover:shadow-lg transition">
+  <img src={item.img} alt={item.title} className="rounded-t w-full h-36 object-cover" />
+  
+  <div className="p-2">
+    <div className="mb-2">
+      <span className="inline-block mt-2 bg-[#F1E6F7] text-purple-600 text-xs font-medium px-3 py-2 rounded-full">
+        Garments
+      </span>
+    </div>
+
+    <h4 className="font-bold mb-2 text-2xl">{item.title}</h4>
+
+    <div className="text-center">
+      <button className="text-purple-600 border-2 border-purple-600 bg-white hover:underline px-6 md:px-20 py-2 rounded">
+        Learn Today
+      </button>
+    </div>
+  
 
 </div>
 
@@ -157,7 +162,7 @@ const HomePage = () => {
 
       {/* Call to Action */}
       <section className="bg-[#7506B1] text-white rounded-[10px] text-center py-12 ml-20 mr-20 md:py-16 px-4">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">Provide the highest quality work that meets your expectation</h2>
+        <h2 className="text-2xl md:text-3xl font-semibold mb-4">Provide the highest quality work that<br/> meets your expectation</h2>
         <button className="bg-white text-black  px-6 py-3 rounded font-semibold hover:bg-gray-100">
           Get Free Consultation
         </button>
@@ -166,7 +171,8 @@ const HomePage = () => {
      {/* Testimonials */}
 <section className="py-12 md:py-20 px-4">
   <div className="max-w-7xl mx-auto">
-    <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">Testimonials</h2>
+    <h2 className="text-2xl md:text-3xl font-bold text-center ">Testimonials</h2>
+     <h3 className="text-sm md:text-lg font-sm text-center mb-8">What Our Customers Are Saying</h3>
     <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
       {Array(4).fill().map((_, idx) => (
         <div key={idx} className="bg-white p-4 rounded shadow hover:shadow-lg transition">
@@ -192,16 +198,16 @@ const HomePage = () => {
           </div>
 
           {/* Text */}
-          <p className="text-sm mb-4">
+          <p className="text-lg font-dm font-normal text-[19.2px] leading-[28.8px] tracking-[0%] mb-4">
             I have been using Adidas shoes for over a year and love it. Can't imagine life without it. It’s so easy to use, and customer service is great.
           </p>
 
           {/* Bottom: user info */}
-          <div className="flex items-center">
+          <div className="flex bg-[#F3E8EE] items-center">
             <img src={`/images/user${idx+1}.jpg`} alt="User" className="w-10 h-10 rounded-full mr-2" />
             <div>
-              <span className="font-semibold block">Kristin Watson</span>
-              <span className="text-xs text-gray-500">Marketing Coordinator</span>
+              <span className="font-manrope font-extrabold text-[14.4px] leading-[100%] tracking-[0%] block">Kristin Watson</span>
+              <span className="text-xs font-manrope font-normal text-[9.6px] leading-[100%] tracking-[0%] text-gray-500">Marketing Coordinator</span>
             </div>
           </div>
         </div>
@@ -213,7 +219,7 @@ const HomePage = () => {
 
       {/* Footer */}
     
-<footer className="bg-purple-900  font-roboto text-gray-200 px-4 py-8">
+<footer className="bg-[#31034A] font-roboto text-gray-200 px-4 py-8">
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 md:gap-8">
 
     {/* Left: Tech World - occupies 50% */}
@@ -236,36 +242,51 @@ const HomePage = () => {
     {/* Right: Services, Pages, Contact - equally distributed */}
     <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
       <div>
-        <h4 className="font-semibold text-[18px] mb-2">Service</h4>
-        <ul className="space-y-1 text-[14px]">
+        <h4 className="font-bold font-roboto text-[18px] mb-2">Service</h4>
+        <ul className="space-y-1 font-roboto font-normal text-[14px]">
           <li>Printed Labels</li>
-          <li>Barcode Stickers</li>
+          <li>Woven label</li>
+          <li>Barcode Sticters</li>
           <li>Heat Transfer Stickers</li>
         </ul>
       </div>
       <div>
-        <h4 className="font-semibold text-[18px] mb-2">Pages</h4>
-        <ul className="space-y-1 text-[14px]">
+        <h4 className="font-bold font-roboto text-[18px] mb-2">Pages</h4>
+        <ul className="space-y-1  font-roboto font-normal text-[14px]">
+          <li>Home it work</li>
           <li>About us</li>
-          <li>Pricing</li>
           <li>Contact</li>
         </ul>
       </div>
-      <div>
-        <h4 className="font-semibold  text-[18px] mb-2">Contact</h4>
-        <p className="text-[14px]">info@example.com</p>
-        <p className="text-[14px]">+123 456 7890</p>
-      </div>
+     <div className="space-y-2">
+  <h4 className="font-bold font-roboto text-[18px] mb-2">Contact</h4>
+
+  <div className="flex items-center  font-roboto font-normal space-x-2">
+    <MdEmail className="text-white w-6 h-6" />
+    <p className="text-[14px]">info@example.com</p>
+  </div>
+
+  <div className="flex items-center space-x-2">
+    <MdPhone className="text-white w-6 h-6" />
+    <p className="text-[14px]">+123 456 7890</p>
+  </div>
+
+  <div className="flex items-center space-x-2">
+    <MdLocationOn className="text-white w-6 h-6" />
+    <p className="text-[14px]">123 Street, City, Country</p>
+  </div>
+</div>
+
     </div>
   </div>
 
   {/* Horizontal line across whole footer */}
-  <hr className="border-gray-600 my-4 max-w-7xl mx-auto" />
+  <hr className="border-white  my-4 max-w-7xl mx-auto" />
 
   {/* Privacy & Terms aligned right below horizontal line */}
-  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-xs text-gray-400">
-    <div className="mb-2 md:mb-0">&copy; 2025 Your Brand - All rights reserved.</div>
-    <div className="flex space-x-4">
+  <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between text-xs text-white">
+    <div className="mb-2 font-normal text-[14px] font-Plus Jakarta Sans md:mb-0">&copy; Copyrights 2023Techmax All rights reserved.</div>
+    <div className="flex font-normal text-[14px] font-Plus Jakarta Sans space-x-4">
       <a href="#" className="hover:text-white">Privacy Policy</a>
       <a href="#" className="hover:text-white">Terms & Conditions</a>
     </div>
